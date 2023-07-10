@@ -1,0 +1,49 @@
+/* Mobile Styles */
+
+/* Adjustments for screens with a maximum width of 768px (e.g., tablets) */
+@media (max-width: 768px) {
+    /* Modify the styles here to make the page responsive for tablets and smaller devices */
+    body {
+      font-size: 16px; /* Adjust the font size for better readability on smaller screens */
+    }
+    
+    /* Example: Center align the text in the header */
+    header {
+      text-align: center;
+    }
+    
+    /* Example: Adjust the width of the menu items */
+    .Main-menu ul li {
+      width: 100%;
+    }
+  }
+  
+  /* Adjustments for screens with a maximum width of 480px (e.g., mobile phones) */
+  @media (max-width: 480px) {
+    /* Modify the styles here to make the page responsive for mobile phones */
+    body {
+      font-size: 14px; /* Adjust the font size for better readability on smaller screens */
+    }
+    
+    /* Example: Hide the background image */
+    body {
+      background-image: none;
+    }
+    
+    /* Example: Modify the section width for better fit on smaller screens */
+    .section2 {
+      width: 90%;
+      margin: 0 auto;
+    }
+    
+    /* Example: Modify the size of images */
+    .screenshot img {
+      width: 200px;
+    }
+    
+    /* Example: Adjust the padding of the description container */
+    .description {
+      padding: 10px;
+    }
+  }
+  
