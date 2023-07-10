@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Examination</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="Sheet.js"></script>
+    </head>
+    <body>
+        <!--MENU and other thing -->
+             <section>
+                 <div class="Main-menu">
+                    <img src="img.Logo.png" id="img1">
+                       <div class="left">   
+                        
+                            <ul>
+                                <li><a href="index1.html">Home</a></li>
+                                <li><a href="index2.html">OUR Service </a></li>
+                                <li><a href="index3.0.html">ONLINE SHOPPING</a></li>
+                                <li><a href="index5.html">Contact us</a></li>
+                            </ul>
+                     
+                          </div>
+                             <div class="Right">
+                                 
+                            
+                                    <Button class="sign-in">Sign in</Button>
+                                    <Button class="Sign-out">Sign out</Button>
+                              
+                               
+                         </div>
+                 </div> 
+          </section>
+
+
+
+          <section class="section2-index">
+            <div class="main0-0">
+              
+                <div class="items1-0" ><h3 class="price1-0">COURSE</h3></div>
+                <div class="items1-0"><h3  class="price1-0">Properties</h3></div>
+                <div class="items1-0"><h3  class="price1-0">Number courses</h3></div>
+                <div class="items1-0"><h3  class="price1-0">Price</h3> </div>
+            </div>
+            <div class="main0-1">
+                <div class="items1-1" style="background-image:url(python.jpg);" class="spec"><input type="checkbox" id="Proper01"></div>
+                <div class="items1-1" ><input type="radio" name="item1" id="main0-1" value="100">Basic- price (100$)<br>
+                    <input type="radio" name="item1" id="main0-2" value="200">Intermediate  - price (200$)<br>
+                    <input type="radio" name="item1" id="main0-3" value="300">Advanced - price (400$)<br>
+                    <input type="radio" name="item1" id="main0-4" value="0">None</div>
+                <div class="items1-1"><select id="Select01" name="u1">
+                        <option value="0">Units</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select></div>
+                <div class="items1-1"  id="itemspec1"><input type="text" id="Amount1" disabled></div>     
+              
+
+            </div>
+
+
+            <div class="main0-2">
+                <div class="items1-2" style="background-image:url(JavaScript-Logo.jpg);" class="spec"><input type="checkbox" id="proper2"></div>
+                <div class="items1-2"><input type="radio" name="item2" id="main210" value="100">Basic price (100$)<br>
+                    <input type="radio" name="item2" id="main220" value="200">Intermediate - price (200$)<br>
+                    <input type="radio" name="item2" id="main023" value="200">Advance (400$)<br>
+                    <input type="radio" name="item2" id="main024" value="0">None</div>
+                <div class="items1-2"><select id="selection2" name="u2">
+                        <option value="0">Units</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select></div>
+                <div class="items1-2"  id="itemspec2"><input type="text" id="Amount02" disabled></div>
+            </div>
+           
+            <div class="main0-3 ">
+                <div class="items1-3" style="background-image:url(java.jpg);"class="spec"><input type="checkbox" id="Proper03"></div>
+                <div class="items1-3"><input type="radio" name="item3" id="main31" value="100">Basic price (100$)<br>
+                    <input type="radio" name="item3" id="main32" value="200">Intermediate  price (200$)<br>
+                    <input type="radio" name="item3" id="main33" value="200">Adavnce price (400$)<br>
+                    <input type="radio" name="item3" id="main34" value="0">None</div>
+                <div class="items1-3"><select id="Select03" name="Select03">
+                        <option value="0">Units</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select></div>
+                <div class="items1-3"  id="itemspec3"> <input type="text" id="Amount3" disabled></div>
+            </div>
+            <div class="main0-4 ">
+                <div class="items1-4" style="background-image:url(React.jpg);"class="spec"><input type="checkbox" id="Proper04"></div>
+                <div class="items1-4"><input type="radio" name="item4" id="main41" value="100">Basic  price (100$)<br>
+                    <input type="radio" name="item4" id="main42" value="200">Intermediate price (200$)<br>
+                    <input type="radio" name="item4" id="main43" value="200">Advance price (400$)<br>
+                    <input type="radio" name="item4" id="main44" value="0">None</div>
+                <div class="items1-4"><select id="Select04" name="Select04">
+                        <option value="0">Units</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select></div>
+                <div class="items1-4"  id="itemspec4"><input type="text" id="Amount4" disabled></div>
+            </div>
+            
+            <div class="main0-6 ">
+                <div class="items1-6" id="items1-6"><center><h2>Total Cost (After 15% discount)</h2></center></div>
+                <div class="items1-6"  id="itemspec6"><button id="btn" onclick=" totalCal()"><center >Calculate</center></button></div>
+                <div class="items1-6"><p id="totAmount">($) 0</p></div> 
+               
+            </div>
+           
+         
+        
+        </section>
+
+        <footer class=" footer ">
+          
+            <div class="fleft">
+              <p>
+                Privacy Policy | cyprus International university | Help and support | Store | Terms
+
+                Computer Engineering, Ciu, and Internet programming projet.
+                Computer™ © 2021 Ciu.edu.tr. All Rights Reserved. built by™ © 2021 internet. All Rights Reserved. Prof fatma™ © 2021 Computer departement. All Rights Reserved. Age™ © 2021 20th Nicosia. All Rights Reserved. Deo™ © 
+                Built by and oleko +90 533 861 36 19
+              </p>
+              </p>
+            </div>
+            <div class="fright">
+             <ul>
+               <li>TUTORIAL</li>
+               <li> Python 3 Tutorial</li>
+               <li>  JavaScript Tutorial</li>
+               <li>Java Tutorial</li>
+               <li> Kotlin Tutorial</li>
+               <li>  Swift Tutorial
+                </li>
+                <li> C++ Tutorial</li>
+                <li> C# Tutorial</li>
+             </ul>
+             
+            
+             
+             
+             
+            
+              
+             
+              
+              
+              
+              
+             
+            
+               
+        </footer>
+
+
+    </body>
+</html>

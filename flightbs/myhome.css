@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.welcome-statement {
+  background-color: #f2f2f2;
+  padding: 40px;
+  text-align: center;
+}
+
+.welcome-statement h1 {
+  font-size: 32px;
+}
+
+.welcome-statement p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.banner {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(background.jpg);
+  background-size: cover;
+  height: 50vh;
+  background-position: center;
+  text-align: center;
+  padding: 80px 0;
+}
+
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin: 10px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  transform: scale(1.1);
+padding: 20px 40px; /* increase the padding to make the buttons bigger */
+  font-size: 24px; /* increase the font size to make the text bigger */
+}
+
+.contact-details {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-details h3 {
+  margin-top: 0;
+}
+
+.contact-details p {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meal Page</title>
+  <link rel="stylesheet" type="text/css" href="meals.css">
+  <script>
+    function calculateTotalPrice() {
+      var foodType = document.getElementById("food-type").value;
+      var beverageOption = document.getElementById("beverage-option").value;
+      var dessert = document.getElementById("dessert").value;
+      var quantity = parseInt(document.getElementById("quantity").value);
+      
+      var foodPrice = 0;
+      var beveragePrice = 0;
+      var dessertPrice = 0;
+      
+      // Set the price based on the selected food type
+      if (foodType === "Sandwich") {
+        foodPrice = 5;
+      } else if (foodType === "Burger") {
+        foodPrice = 8;
+      } else if (foodType === "Pizza") {
+        foodPrice = 10;
+      }
+      
+      // Set the price based on the selected beverage option
+      if (beverageOption === "Water") {
+        beveragePrice = 1;
+      } else if (beverageOption === "Soda") {
+        beveragePrice = 2;
+      } else if (beverageOption === "Juice") {
+        beveragePrice = 3;
+      }
+      
+      // Set the price based on the selected dessert
+      if (dessert === "Cake") {
+        dessertPrice = 4;
+      } else if (dessert === "Ice Cream") {
+        dessertPrice = 3;
+      } else if (dessert === "Pudding") {
+        dessertPrice = 2;
+      }
+      
+      // Calculate the total price
+      var totalPrice = (foodPrice + beveragePrice + dessertPrice) * quantity;
+      
+      // Update the total price field
+      document.getElementById("total-price").value = totalPrice.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Select Your Meal and Beverage</h1>
+    
+    <form action="meals.php" method="post">
+      <div class="form-group">
+        <label for="passengerID">Passenger ID:</label>
+        <input type="text" id="passengerID" name="passengerID" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="food-type">Food Type:</label>
+        <select id="food-type" name="food-type" onchange="calculateTotalPrice()">
+          <option value="Sandwich">Sandwich</option>
+          <option value="Burger">Burger</option>
+          <option value="Pizza">Pizza</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="beverage-option">Beverage Option:</label>
+        <select id="beverage-option" name="beverage-option" onchange="calculateTotalPrice()">
+          <option value="Water">Water</option>
+          <option value="Soda">Soda</option>
+          <option value="Juice">Juice</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="dessert">Dessert:</label>
+        <select id="dessert" name="dessert" onchange="calculateTotalPrice()">
+          <option value="Cake">Cake</option>
+          <option value="Ice Cream">Ice Cream</option>
+          <option value="Pudding">Pudding</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" placeholder="Enter quantity..." required onchange="calculateTotalPrice()">
+      </div>
+      
+      <div class="form-group">
+        <label for="total-price">Total Price:</label>
+        <input type="text" id="total-price" name="total-price" readonly>
+      </div>
+      
+      <input type="submit" value="Save">
+    </form>
+  </div>
+</body>
+</html>
+
+
+
+	  
+	  
+	  
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <title>Meal Page</title>
+  <link rel="stylesheet" type="text/css" href="meals.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Select Your Meal and Beverage</h1>
+    
+    <form action="meals.php" method="post">
+      <label for="food-type">Food Type:</label>
+      <select id="food-type" name="food-type">
+        <option value="Sandwich">Sandwich</option>
+        <option value="Burger">Burger</option>
+        <option value="Pizza">Pizza</option>
+       
+      </select>
+      
+      <label for="beverage-option">Beverage Option:</label>
+      <select id="beverage-option" name="beverage-option">
+        <option value="Water">Water</option>
+        <option value="Soda">Soda</option>
+        <option value="Juice">Juice</option>
+       
+      </select>
+      
+      <label for="dessert">Dessert:</label>
+      <select id="dessert" name="dessert">
+        <option value="Cake">Cake</option>
+        <option value="Ice Cream">Ice Cream</option>
+        <option value="Pudding">Pudding</option>
+       
+      </select>
+      
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" placeholder="Enter quantity..." required>
+      
+      <input type="submit" value="Save">
+    </form>
+  </div>
+</body>
+</html>-->

@@ -1,0 +1,134 @@
+<?php
+// Retrieve passenger ID from the query string
+$passengerID = $_GET['passengerID'];
+
+// Database connection
+$conn = new mysqli('localhost', 'root', '', 'flightbookingdb');
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Retrieve passenger details
+$query = "SELECT firstName, lastName FROM passengers2 WHERE passengerID = $passengerID";
+$result = $conn->query($query);
+$row = $result->fetch_assoc();
+$firstName = $row['firstName'];
+$lastName = $row['lastName'];
+
+// Close the database connection
+$conn->close();
+
+// Return passenger details as JSON
+echo json_encode(array('firstName' => $firstName, 'lastName' => $lastName));
+?>
+
+
+
+
+
+wow the worked stored procedure for  thotal prive
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Page</title>
+  <link rel="stylesheet" type="text/css" href="payment.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Make Payment</h1>
+    
+    <form action="payment.php" method="post">
+      <div class="form-group">
+        <label for="passengerID">Passenger ID:</label>
+        <input type="text" id="passengerID" name="passengerID" required>
+      </div>
+      
+      <input type="submit" value="Calculate Total Price">
+    </form>
+
+    <!-- Display the total price here -->
+    <div id="totalPriceContainer">
+      <h2>Total Price:</h2>
+      <span id="totalPrice"><?php echo $totalPrice; ?></span>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+<!--<?php
+
+// Retrieve passenger ID from the form
+$passengerID = $_POST['passengerID'];
+
+// Database connection
+$conn = new mysqli('localhost', 'root', '', 'flightbookingdb');
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Prepare the stored procedure call
+$stmt = $conn->prepare("CALL CalculateTotalPrice(?, @flightotalPrice)");
+$stmt->bind_param("i", $passengerID);
+
+// Execute the stored procedure
+$stmt->execute();
+
+// Retrieve the calculated total price
+$result = $conn->query("SELECT @flightotalPrice AS TotalPrice");
+$row = $result->fetch_assoc();
+$totalPrice = $row['TotalPrice'];
+
+// Close the database connection
+$stmt->close();
+$conn->close();
+
+// Display the total price to the user
+echo "Total Price: $" . $totalPrice;
+?><?php
+
+// Retrieve values from the form
+$passengerID = $_POST['passengerID'];
+$flightId = $_POST['flightId'];
+$departure = $_POST['departure'];
+$destination = $_POST['destination'];
+$departureDate = $_POST['departuredate'];
+$price = $_POST['price'];
+
+// Database connection
+$conn = new mysqli('localhost', 'root', '', 'flightbookingdb');
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Prepare and execute the SQL statement
+$stmt = $conn->prepare("INSERT INTO flight3 (flightId, departure, destination, departureDate, price, passengerID) VALUES (?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("isssdi", $flightId, $departure, $destination, $departureDate, $price, $passengerID);
+$stmt->execute();
+
+if ($stmt->affected_rows > 0) {
+    echo "Flight details stored successfully.";
+    // Redirect to next page
+    header("Location: meals.html");
+    exit();
+} else {
+    echo "Failed to store flight details.";
+}
+
+$stmt->close();
+$conn->close();
+
+?>
+
+

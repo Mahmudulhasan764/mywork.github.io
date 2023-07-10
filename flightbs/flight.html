@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flight Details</title>
+	<link rel="stylesheet" type="text/css" href="flight.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Check Your Flight Details</h1>
+		<form action="flight.php" method="post">
+			<label for="departure">Departure:</label>
+			<select id="departure" name="departure">
+				<option value="New York">New York</option>
+				<option value="Los Angeles">Los Angeles</option>
+				<option value="Chicago">Chicago</option>
+				<option value="Houston">Houston</option>
+				<option value="Miami">Miami</option>
+			</select>
+			<label for="destination">Destination:</label>
+			<select id="destination" name="destination">
+				<option value="London">London</option>
+				<option value="Paris">Paris</option>
+				<option value="Tokyo">Tokyo</option>
+				<option value="Dubai">Dubai</option>
+				<option value="Sydney">Sydney</option>
+			</select>
+			<label for="departuredate" >Departure Date:</label>
+			<input type="date" id="departuredate" name="departuredate">
+			<input type="submit" class="btn btn-primary" value="Submit">
+		</form>
+		<div class="result">
+			<!-- Flight details will be displayed here -->
+		</div>
+	</div>
+</body>
+</html>
+
+

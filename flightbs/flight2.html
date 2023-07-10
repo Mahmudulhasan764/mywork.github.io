@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Details</title>
+    <link rel="stylesheet" type="text/css" href="flight.css">
+    <script>
+        function updatePrice() {
+            var destination = document.getElementById("destination").value;
+            var price = 0;
+
+            // Set the price based on the selected destination
+            if (destination === "London") {
+                price = 500;
+            } else if (destination === "Paris") {
+                price = 600;
+            } else if (destination === "Tokyo") {
+                price = 800;
+            } else if (destination === "Dubai") {
+                price = 700;
+            } else if (destination === "Sydney") {
+                price = 900;
+            }
+
+            // Update the price field
+            document.getElementById("price").value = price;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Check Your Flight Details</h1>
+        <form action="flight2.php" method="post">
+            <div class="form-group">
+                <label for="passengerID">Passenger ID:</label>
+                <input type="text" id="passengerID" name="passengerID" required>
+            </div>
+            <div class="form-group">
+                <label for="flightId">Flight ID:</label>
+				<input type="text" id="flightId" name="flightId" required>
+              
+                   
+       
+            </div>
+            <div class="form-group">
+                <label for="departure">Departure:</label>
+                <select id="departure" name="departure" required>
+                    <option value="New York">New York</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Houston">Houston</option>
+                    <option value="Miami">Miami</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination:</label>
+                <select id="destination" name="destination" onchange="updatePrice()" required>
+                    <option value="London">London</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Tokyo">Tokyo</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="Sydney">Sydney</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="departuredate">Departure Date:</label>
+                <input type="date" id="departuredate" name="departuredate" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" placeholder="Enter price..." required>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+        <div class="result">
+            <!-- Flight details will be displayed here -->
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Details</title>
+    <link rel="stylesheet" type="text/css" href="flight.css">
+    <script>
+        function updatePrice() {
+            var destination = document.getElementById("destination").value;
+            var price = 0;
+
+            // Set the price based on the selected destination
+            if (destination === "London") {
+                price = 500;
+            } else if (destination === "Paris") {
+                price = 600;
+            } else if (destination === "Tokyo") {
+                price = 800;
+            } else if (destination === "Dubai") {
+                price = 700;
+            } else if (destination === "Sydney") {
+                price = 900;
+            }
+
+            // Update the price field
+            document.getElementById("price").value = price;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Check Your Flight Details</h1>
+        <form action="flight2.php" method="post">
+            <div class="form-group">
+                <label for="flightId">Flight ID</label>
+                <select class="form-control" id="flightId" name="flightId">
+                    <option value="1">Flight 1</option>
+                    <option value="2">Flight 2</option>
+                    <option value="3">Flight 3</option>
+                    <option value="4">Flight 4</option>
+                </select>
+            </div>
+            <label for="departure">Departure:</label>
+            <select id="departure" name="departure">
+                <option value="New York">New York</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Houston">Houston</option>
+                <option value="Miami">Miami</option>
+            </select>
+            <label for="destination">Destination:</label>
+            <select id="destination" name="destination" onchange="updatePrice()">
+                <option value="London">London</option>
+                <option value="Paris">Paris</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="Dubai">Dubai</option>
+                <option value="Sydney">Sydney</option>
+            </select>
+            <label for="departuredate">Departure Date:</label>
+            <input type="date" id="departuredate" name="departuredate">
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" placeholder="Enter price..." required>
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+        <div class="result">
+            <!-- Flight details will be displayed here 
+        </div>
+    </div>
+</body>
+</html> -->

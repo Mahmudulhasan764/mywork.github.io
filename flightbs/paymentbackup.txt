@@ -1,0 +1,45 @@
+<?php
+
+// Retrieve passenger ID from the form
+$passengerID = $_POST['passengerID'];
+
+// Database connection
+$conn = new mysqli('localhost', 'root', '', 'flightbookingdb');
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Retrieve flight price
+$flightPriceQuery = "SELECT price FROM flight3 WHERE passengerID = $passengerID";
+$flightPriceResult = $conn->query($flightPriceQuery);
+
+// Retrieve meal total price
+$mealPriceQuery = "SELECT totalPrice FROM meal2 WHERE passengerID = $passengerID";
+$mealPriceResult = $conn->query($mealPriceQuery);
+
+// Calculate the total price
+$totalPrice = 0;
+
+if ($flightPriceResult->num_rows > 0) {
+    $flightPriceRow = $flightPriceResult->fetch_assoc();
+    $totalPrice += $flightPriceRow['price'];
+}
+
+if ($mealPriceResult->num_rows > 0) {
+    $mealPriceRow = $mealPriceResult->fetch_assoc();
+    $totalPrice += $mealPriceRow['totalPrice'];
+}
+
+// Close the database connection
+$conn->close();
+
+// Display the total price to the user
+echo "Total Price: $" . $totalPrice;
+
+?>
+
+
+
+
