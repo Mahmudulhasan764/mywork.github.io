@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("back.jpg");
+  background-image: url("back.JPG");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -19,10 +19,11 @@ body::before {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 p {
-  text-align: justify; /* Aligns the text to the center */
-  width: 90%; /* Sets the width of the paragraph to 80% of its container */
-  margin: 0 auto; /* Centers the paragraph horizontally */
+  text-align: justify;
+  width: 90%;
+  margin: 0 auto;
 }
 
 header {
@@ -44,7 +45,7 @@ header {
   flex-direction: row;
   align-items: center;
   margin: 10px;
-  padding: 20px; /* Added padding */
+  padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -61,9 +62,8 @@ header {
   background-color: #f5f5f5;
   padding: 20px;
   text-align: center;
-  margin-left: 20px; /* Added margin for horizontal distance */
+  margin-left: 20px;
 }
-
 
 .features {
   background-color: #fff;
@@ -74,12 +74,11 @@ header {
 .features h2 {
   color: #333;
   text-align: center;
-  
 }
+
 .features h3 {
   color: #333;
   text-align: center;
-  
 }
 
 .features ul {
@@ -103,9 +102,9 @@ header {
 
 .description {
   background-color: transparent;
-  padding: 20px 10px; /* Adjust the padding as needed */
-  max-width: 600px; /* Set the maximum width of the container */
-  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px 10px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .description p {
@@ -113,12 +112,13 @@ header {
   color: rgb(12, 11, 11);
   text-align: justify;
 }
+
 .description h4 {
-  color:black;
+  color: black;
   text-align: justify;
-  padding: 40px 40px; /* Adjust the padding as needed */
-  max-width: 1000px; /* Set the maximum width of the container */
-  margin: 0 auto; /* Center the container horizontally */
+  padding: 40px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
   background-color: rgb(235, 241, 248);
 }
 
@@ -128,6 +128,49 @@ header {
 
 footer {
   background-color: transparent;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+
+  .navbar ul li a {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .screenshot {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .screenshot img {
+    width: 200px;
+  }
+}
+
+/* Styles for smaller mobile devices */
+@media (max-width: 480px) {
+  body {
+    font-size: 18px;
+  }
+
+  .navbar ul li a {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .screenshot img {
+    width: 150px;
+  }
+}
+
   color: white;
   padding: 10px;
   text-align: center;
